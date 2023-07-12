@@ -1,0 +1,315 @@
+body{
+    background-color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+
+
+.container{
+    width: 80%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items : center;
+}
+
+.btn-all{
+    background: white;
+    border: 1px solid black;
+    border-radius: 1rem;
+    text-align: center;
+    padding-inline: 1rem;
+    padding-block: .5rem;
+    transition: 300ms;
+}
+
+.btn-all:hover{
+    background-color: lightgrey;
+}
+
+.form-input{
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: .5rem;
+}
+
+.form-input:focus{
+    border: none;
+}
+
+
+
+.calendar{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+}
+
+.day{
+    width: 100%;
+    height: 7rem;
+    border: 1px solid black;
+}
+
+.day button{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transition: 300ms;
+}
+
+.day button:enabled:hover{
+    background: gainsboro;
+}
+
+.hours{
+    width: 60%;
+    border: 1px solid black;
+    margin-top: 3rem;
+    padding: .5rem;
+}
+
+.hour{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 1.3rem;
+}
+
+/*
+
+td{
+    padding-block: .3rem;
+    padding-inline: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 15px;
+}
+
+tr:nth-child(even) {background: lightgrey}
+tr:nth-child(odd) {background: transparent}
+
+table{
+    width: 70%;
+    text-align: center;
+}
+
+td:nth-child(3){
+    text-align: left;
+    width: 60%;
+}
+*/
+/*NAV*/
+
+.nav{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-buttons{
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-buttons a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+}
+
+.nav-buttons a:hover{
+    text-decoration: underline;
+}
+
+
+.bi-box-arrow-in-right, .bi-box-arrow-in-left{
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+
+.login{
+    border: 2px solid black;
+    border-radius: 1rem;
+    background: gray;
+    width: 20rem;
+    opacity: 1;
+    height: 20rem;
+    position: fixed ;
+    top: 20vh;
+    display: none;
+/*     display: flex;
+    flex-direction: column;
+    align-items: center; */
+    z-index: 1000;
+    transition: 500ms;
+}
+
+.login::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    z-index: -1000;
+    opacity: .5;
+    transition: 500ms;
+}
+
+.login h1{
+    margin-top: 3rem;
+    color: whitesmoke;
+}
+
+.login i{
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.login form{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 10;
+}
+
+/*SCHEDULES*/
+
+.schedules{
+    margin-top: 2rem;
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.schedules h3{
+    text-decoration: underline;
+}
+
+.schedule{
+    display: flex;
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+.schedule button{
+    color: red;
+}
+
+.schedule p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+.scheduling-form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+select{
+    border: 1px solid lightgray;
+    text-align: center;
+    -webkit-appearance: none;
+    width: 5rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    padding-inline: 1rem;
+    transition: 300ms;
+}
+
+select:hover{
+    width: 14rem;
+}
+
+select option{
+    opacity: .8;
+}
+
+.description{
+    text-align: center;
+    width: 5rem;
+    border-radius: 1rem;
+    transition: 300ms;
+}
+
+.description:hover{
+    width: 120%;
+}
+
+.scheduling-form button{
+    width: 5rem;
+    height: 2rem;
+    padding-inline: 1rem;
+    padding-block: .3rem;
+    text-align: center;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 1rem;
+    transition: 300ms;
+}
+
+.scheduling-form button:hover{
+    width: 7rem;
+}
+
+/* register */
+
+.bi-gear{
+    font-size: 1.3rem;
+}
+
+.bi-trash{
+    color: red;
+}
+
+.register{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/*.supervisors{
+    display: flex;
+    flex-direction: column;
+}
+
+.supervisor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}*/
+
+table{
+    text-align: center;
+    width: 80%;
+}
+
+tr:nth-child(even) {background: lightgrey}
+tr:nth-child(odd) {background: transparent}
