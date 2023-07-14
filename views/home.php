@@ -14,24 +14,24 @@
 
     <?php 
             if(isset($_SESSION['username'])){
-            echo  '<form action="myschedules" method="post">';
-            echo  '   <input type="hidden" name="id" value='.$_SESSION['id'].'>';
-            echo  '    <button type="submit" class="btn-all"><i class="bi bi-list"></i></button>';
-            echo  '</form>';
                 echo $_SESSION['username'];
+            echo  '<form action="myschedules" method="post">';
+            echo  '<button type="submit" class="btn-all"><i class="bi bi-list"></i></button>';
+            echo  '<input type="hidden" name="id" value='.$_SESSION['id'].'>';
+            echo  '</form>';
             }
         ?>
         <?php 
             if(isset($_SESSION['admin'])){
                 if($_SESSION['admin'] == 1){
-                    echo '<a href="admin"><i class="bi bi-gear"></i></a>';
+                    echo '<a class="btn-all" href="admin"><i class="bi bi-gear"></i></a>';
                 }
             }
         ?>
         
-        <?= !isset($_SESSION['name']) ? "<h2 id='openLogin'><i class='bi bi-box-arrow-in-right'></i></h2>" 
+        <?= !isset($_SESSION['name']) ? "<h2  class='btn-all' id='openLogin'><i class='bi bi-box-arrow-in-right'></i></h2>" 
         : 
-        "<a href='logout'><i class='bi bi-box-arrow-in-left'></i></a>" ?>
+        "<a class='btn-all' href='logout'><i class='bi bi-box-arrow-in-left'></i></a>" ?>
 
         
         
@@ -50,15 +50,15 @@
                 $_SESSION['admin'] = $user['admin'];  
                 $_SESSION['id'] = $user['id'];  
                 $_SESSION['logged'] = 1;   
-                header('Location: http://localhost/php/schedule/');
+                echo "<script>location.href = './'</script>";
             }else{  
                 echo "<script>
-            alert('Usuário ou senha incorretos')
+            alert('Usuário ou senha incorretos');location.href='./';
             </script>";
             }
         }else{
             echo "<script>
-            alert('Usuário ou senha incorretos')
+            alert('Usuário ou senha incorretos');location.href='./';
             </script>";
         }
     }

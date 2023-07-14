@@ -50,7 +50,7 @@
         ?>
         </select>
         <input class="description" name="description" type="text" placeholder="Descrição">
-        <button type="submit" name="action">Agendar</button>
+        <button class="btn-all" type="submit" name="action">Agendar</button>
     
     </form>
 </div>

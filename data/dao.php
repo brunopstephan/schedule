@@ -49,7 +49,7 @@
 
         if($stmt->execute()){
 
-            header('Location: http://localhost/php/schedule/');
+            echo "<script>location.Reload();location.href = './';</script>";
         }
 
         
@@ -66,7 +66,7 @@
 
         if($stmt->execute()){
 
-            header('Location: http://localhost/php/schedule/');
+            echo "<script>location.Reload();;location.href = './';</script>";
         }
 
         
@@ -83,7 +83,7 @@
 
         if($stmt->execute()){
 
-            header('Location: http://localhost/php/schedule/');
+            echo "<script>location.Reload();location.href = './';</script>";
         }
         
         $stmt->close();
@@ -124,7 +124,7 @@
         $stmt->bind_param("sssi", $name, $username, $password, $id);
 
         if($stmt->execute()){
-            header('Location: http://localhost/php/schedule/admin');
+            echo "<script>location.href = 'admin';</script>";
         }else{
             echo $stmt->error;
         }

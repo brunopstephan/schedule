@@ -3,6 +3,7 @@
   <tr>
     <th>Data</th>
     <th>Horário</th>
+    <th>Descrição</th>
   </tr>
     <?php 
         $id = $_POST["id"];
@@ -11,6 +12,7 @@
             echo '<tr>';
             echo '<td>'.$schedule["day"] . "/" . $schedule['month'] .'</td>';
             echo '<td>'.$schedule['inithour'] . " - " . $schedule['endhour'].'</td>';
+            echo '<td>'.$schedule['description'].'</td>';
             echo '</tr>';
         } 
     ?>
