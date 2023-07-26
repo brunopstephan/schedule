@@ -5,6 +5,7 @@
     
     require_once("./data/dao.php");
     require_once("components/head.php");
+    require_once("./components/nav.php");
 
     $allDays = allDays();
     $date = new DateTime();

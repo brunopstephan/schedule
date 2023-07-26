@@ -1,6 +1,4 @@
 <?php 
-
-
     $day = getDay($_POST['day']);
 
     $date = new DateTime();
@@ -12,7 +10,6 @@
         if(isset($_SESSION['logged'])){
             $expireDate = date('Y').'-'.date('m').'-'.$_POST['day'].' '.$_POST['endhour'].':00:00';
             insert($_POST['day'], $_POST['inithour'], $_POST['endhour'], date('m'), $_POST['description'], $_SESSION['id'], $expireDate, date('Y'));
-            
         }else{
             echo "<script>
             alert('Você não tem permissão para agendar ou não está autenticado')
@@ -32,7 +29,7 @@
             <option value="">Selecione a hora de inicio</option>
         <?php 
             for ($hour=0; $hour < 24; $hour++) { 
-                if($hour < $date->format('H')){
+                if($hour < $date->format('H') && $_POST['day'] == date('d')){
                     echo '<option value="'.$hour.'" id="'.$hour.'" disabled>'.$hour.'</option>';
                 }else{
                     echo '<option value="'.$hour.'" id="'.$hour.'">'.$hour.'</option>';

@@ -20,6 +20,7 @@ body{
 .btn-all{
     background: #5a5e69;
     border: 1px solid #434957;
+    color: white;
     border-radius: 1rem;
     text-align: center;
     padding-inline: 1rem;
@@ -30,6 +31,15 @@ body{
 .btn-all:hover{
     translate: 0 -5px;
     background-color: #434957;
+}
+
+.btn-all:disabled{
+    color: rgba(255, 00, 00);
+}
+
+.btn-all:disabled:hover{
+    translate: none;
+    background-color: #5a5e69;
 }
 
 .form-input{
@@ -113,8 +123,7 @@ td:nth-child(3){
     width: 100%;
     height: 4rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: end;
 }
 
 .nav-buttons{
@@ -313,5 +322,5 @@ table{
     width: 80%;
 }
 
-tr:nth-child(even) {background: #5a5e69}
+tr:nth-child(even) {background: #434957}
 tr:nth-child(odd) {background: transparent}

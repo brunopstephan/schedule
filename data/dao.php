@@ -46,13 +46,12 @@
         
         $stmt = mysqli_prepare($conn, $sql);
         $stmt->bind_param("iiisssss", $day, $inithour, $endhour, $month, $description, $userid, $expire, $year);
-
+        
         if($stmt->execute()){
 
-            echo "<script>location.Reload();location.href = './';</script>";
+            echo "<script>location.href = './';</script>";
         }
 
-        
         $stmt->close();
         $conn->close();
     }
@@ -66,7 +65,7 @@
 
         if($stmt->execute()){
 
-            echo "<script>location.Reload();;location.href = './';</script>";
+            echo "<script>location.Reload();location.href = './';</script>";
         }
 
         
